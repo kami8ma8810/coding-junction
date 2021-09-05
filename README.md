@@ -1,6 +1,9 @@
 # coding-junction
 Nuxt.js × Netlify × microCMS構築サイト
 
+## エラー履歴
+fiberが原因で、Netlifyでbuild/generateエラー。一度削除済み。
+
 ## Build Setup
 
 ```bash
