@@ -1,4 +1,5 @@
 import Sass from 'sass'
+import Fiber from 'fibers'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -50,13 +51,22 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
   ],
-  // styleResources: {
-  //   scss: ['~/assets/sass/global/_variables.scss'],
-  // },
+  styleResources: {
+    scss: ['~/assets/sass/global/_variables.scss'],
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    loaders: {
+      scss: {
+        implementation: Sass,
+        sassOptions: {
+          fiber: Fiber,
+        },
+      },
+    },
+  },
 }
