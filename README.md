@@ -1,4 +1,5 @@
 # coding-junction
+Nuxt.js × Netlify × microCMS構築サイト
 
 ## Build Setup
 
