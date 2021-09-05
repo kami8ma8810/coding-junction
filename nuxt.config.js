@@ -7,9 +7,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'coding-junction',
+    title: 'Coding Junction',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'ja',
     },
     meta: [
       { charset: 'utf-8' },
@@ -29,7 +29,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [{ src: '~/assets/sass/style.scss', lang: 'scss' }],
+  css: [{ src: '~/assets/sass/common.scss', lang: 'scss' }],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -49,11 +49,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/style-resources',
+    '@nuxtjs/style-resources', // グローバルなsass変数を利用
   ],
-  styleResources: {
-    scss: ['~/assets/sass/global/_variables.scss'],
-  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
@@ -68,5 +65,8 @@ export default {
         },
       },
     },
+  },
+  styleResources: {
+    scss: ['~/assets/sass/global/_variable.scss'],
   },
 }

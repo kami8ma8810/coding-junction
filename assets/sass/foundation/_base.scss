@@ -9,8 +9,8 @@ html {
 }
 
 body {
-  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
-    'Hiragino Sans', Meiryo, sans-serif;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
   -webkit-font-smoothing: antialiased;
   // ドラッグ時の色
   // ::selection{
@@ -22,9 +22,9 @@ body {
   //   background: $mainBlue;
   // }
   // 字間調整
-  font-feature-settings: 'palt';
+  font-feature-settings: "palt";
   letter-spacing: 0.1em;
-  background-color: blanchedalmond;
+  background-color: black;
 }
 
 // PC/SP画像保存禁止

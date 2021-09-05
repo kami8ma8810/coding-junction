@@ -12,7 +12,5 @@ module.exports = {
   rules: {
     'plugin/declaration-block-no-ignored-properties': true,
     'color-hex-case': 'lower',
-    'string-quotes': 'double',
-    'selector-pseudo-element-colon-notation': 'double',
   },
 }
