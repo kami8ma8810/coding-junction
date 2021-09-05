@@ -1,8 +1,8 @@
 @use "../global"as *;
 
-html{
+html {
   text-size-adjust: 100%;
-  -webkit-tap-highlight-color:transparent;//タップの強調色解除
+  -webkit-tap-highlight-color: transparent; //タップの強調色解除
   /* フォントサイズの正確に */
   -webkit-text-size-adjust: 100%;
   /* 文字をシャープに */
@@ -11,12 +11,8 @@ html{
 }
 
 body {
-  font-family: "Helvetica Neue",
-  Arial,
-  "Hiragino Kaku Gothic ProN",
-  "Hiragino Sans",
-  Meiryo,
-  sans-serif;
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', Meiryo, sans-serif;
   -webkit-font-smoothing: antialiased;
   // ドラッグ時の色
   // ::selection{
@@ -28,8 +24,9 @@ body {
   //   background: $mainBlue;
   // }
   // 字間調整
-  font-feature-settings: "palt";
-letter-spacing: .1em;
+  font-feature-settings: 'palt';
+  letter-spacing: 0.1em;
+  background-color: blanchedalmond;
 }
 
 // PC/SP画像保存禁止
