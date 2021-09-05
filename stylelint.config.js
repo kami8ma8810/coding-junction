@@ -1,6 +1,8 @@
 module.exports = {
-  extends: [
+  plugins: [
     'stylelint-declaration-block-no-ignored-properties', //無意味なプロパティを通知（ex.インライン要素にwidth
+  ],
+  extends: [
     // 'stylelint-config-standard',
     // 'stylelint-config-standard-scss',
     // 'stylelint-config-prettier',
