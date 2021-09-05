@@ -2,10 +2,8 @@
 
 html {
   text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent; //タップの強調色解除
-  /* フォントサイズの正確に */
   -webkit-text-size-adjust: 100%;
-  /* 文字をシャープに */
+  -webkit-tap-highlight-color: transparent; //タップの強調色解除
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
