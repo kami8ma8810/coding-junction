@@ -2,7 +2,7 @@
 	<div>
 		<nav>
 			<ul>
-				<li>
+				<!-- <li>
 					<nuxt-link to="/link01">リンク1</nuxt-link>
 				</li>
 				<li>
@@ -13,7 +13,7 @@
 				</li>
 				<li>
 					<nuxt-link to="/link04">リンク4</nuxt-link>
-				</li>
+				</li> -->
 			</ul>
 		</nav>
 	</div>
