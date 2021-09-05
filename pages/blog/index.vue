@@ -1,18 +1,25 @@
 <template>
-  <main>
-    <h1>ブログ一覧</h1>
-    <ul>
-      <li v-for="content in contents" :key="content.id">
-        <nuxt-link :to="`/blog/${content.id}`">
-          {{ content.title }}
-        </nuxt-link>
-      </li>
-    </ul>
-  </main>
+  <div>
+    <Header/>
+    <main>
+      <h1>ブログ一覧</h1>
+      <ul>
+        <li v-for="content in contents" :key="content.id">
+          <nuxt-link :to="`/blog/${content.id}`">
+            {{ content.title }}
+          </nuxt-link>
+        </li>
+      </ul>
+    </main>
+  </div>
 </template>
 <script>
 import axios from "axios";
+import Header from '@/components/header.vue';
 export default {
+  components:{
+    Header
+  },
   async asyncData() {
     const { data } = await axios.get(
       "https://coding-junction.microcms.io/api/v1/blog",
