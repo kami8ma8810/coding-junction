@@ -1,5 +1,5 @@
 import Sass from 'sass'
-import Fiber from 'fibers'
+// import Fiber from 'fibers'
 
 const siteUrl = 'https://coding-junction.com/'
 const siteName = 'Coding Junction'
@@ -66,9 +66,9 @@ export default {
     loaders: {
       scss: {
         implementation: Sass,
-        sassOptions: {
-          fiber: Fiber,
-        },
+        // sassOptions: {
+        //   fiber: Fiber,
+        // },
       },
     },
   },
