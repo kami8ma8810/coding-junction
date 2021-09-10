@@ -22,19 +22,21 @@
 </template>
 
 <script>
-
 export default {}
 </script>
 
 <style lang="scss" scoped>
-.header{
+.header {
   background-color: #fff;
 }
 .header-inner {
   display: flex;
   align-items: center;
 }
-.header-title{
+.header-title {
   color: #333;
+}
+main {
+  color: $mainYellow;
 }
 </style>

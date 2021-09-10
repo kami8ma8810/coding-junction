@@ -1,23 +1,29 @@
 import Sass from 'sass'
 import Fiber from 'fibers'
 
+const siteUrl = 'https://coding-junction.com/'
+const siteName = 'Coding Junction'
+const siteDesc =
+  'Coding Junctionは、コーディングをする人がいつでも戻れる場所。交流して学び合い、再出発する場所。'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Coding Junction',
+    titleTemplate: `%s | ${siteName}`,
     htmlAttrs: {
       lang: 'ja',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: siteDesc },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
+      { rel: 'canonical', href: siteUrl },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'apple-touch-icon',
@@ -29,7 +35,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [{ src: '~/assets/sass/common.scss', lang: 'scss' }],
+  css: [{ src: '~/assets/scss/common.scss', lang: 'scss' }],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -67,6 +73,6 @@ export default {
     },
   },
   styleResources: {
-    scss: ['~/assets/sass/global/_variable.scss'],
+    scss: ['~/assets/scss/_variables.scss'],
   },
 }
