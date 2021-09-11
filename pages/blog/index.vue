@@ -1,8 +1,7 @@
 <template>
   <div>
-    <Header/>
     <main>
-      <h1>ブログ一覧</h1>
+      <h1 class="page-title">Blog</h1>
       <ul>
         <li v-for="content in contents" :key="content.id">
           <nuxt-link :to="`/blog/${content.id}`">
@@ -14,20 +13,17 @@
   </div>
 </template>
 <script>
-import axios from "axios";
-import Header from '@/components/header.vue';
+import axios from 'axios'
+
 export default {
-  components:{
-    Header
-  },
   async asyncData() {
     const { data } = await axios.get(
-      "https://coding-junction.microcms.io/api/v1/blog",
+      'https://coding-junction.microcms.io/api/v1/blog',
       {
-        headers: { "X-API-KEY": "ba518e2d-72c5-4707-bde8-826fd87237bc" }
+        headers: { 'X-API-KEY': process.env.API_KEY },
       }
-    );
-    return data;
-  }
-};
+    )
+    return data
+  },
+}
 </script>

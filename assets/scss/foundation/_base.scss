@@ -9,35 +9,46 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans", Meiryo, sans-serif;
+  background-color: $bodyBg;
+  font-family: $yugothic,
+    "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
-  // ドラッグ時の色
-  // ::selection{
-  //   color: #fff;
-  //   background: $mainBlue;
-  // }
-  // ::-moz-selection{
-  //   color: #fff;
-  //   background: $mainBlue;
-  // }
-  // 字間調整
-  font-feature-settings: "palt";
-  letter-spacing: 0.1em;
-  background-color: black;
+  ::selection{
+    color: $white;
+    background: $mainYellow;
+  }
+  ::-moz-selection{
+    color: $white;
+    background: $mainYellow;
+  }
+}
+
+
+a{
+  transition: opacity .4s $easeOutCubic;
+}
+a:hover ,
+a:active {
+  opacity: 0.5;
+
 }
 
 // PC/SP画像保存禁止
-// img {
-//   // pointer-events: none;
-//   -webkit-touch-callout: none;
-//   -webkit-user-select: none;
-//   -moz-touch-callout: none;
-//   -moz-user-select: none;
-//   user-select: none;
-// }
+img {
+  // pointer-events: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-touch-callout: none;
+  -moz-user-select: none;
+  user-select: none;
+}
 
-// スクリーンリーダー非表示
+// スクリーンリーダー用
 .sr-only {
   position: absolute;
   width: 1px;

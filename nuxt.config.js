@@ -1,5 +1,8 @@
 import Sass from 'sass'
 // import Fiber from 'fibers'
+require('dotenv').config()
+const { API_KEY } = process.env
+const axios = require('axios')
 
 const siteUrl = 'https://coding-junction.com/'
 const siteName = 'Coding Junction'
@@ -35,8 +38,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [{ src: '~/assets/scss/common.scss', lang: 'scss' }],
-
+  css: [
+    // { src: '~/assets/scss/reset.scss', lang: 'scss' },
+    // { src: '~/assets/scss/style.scss', lang: 'scss' },
+  ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
@@ -62,17 +67,15 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    loaders: {
-      scss: {
-        implementation: Sass,
-        // sassOptions: {
-        //   fiber: Fiber,
-        // },
-      },
-    },
-  },
+  build: {},
   styleResources: {
-    scss: ['~/assets/scss/_variables.scss'],
+    scss: [
+      '~/assets/scss/global/_variables.scss',
+      '~/assets/scss/global/_mixins.scss',
+    ],
+  },
+  // microCMS
+  env: {
+    API_KEY,
   },
 }

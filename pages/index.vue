@@ -1,23 +1,12 @@
 <template>
-  <!-- template直下には１つのHTMLのみ ここではdiv（それより下層はいくつでもOK） -->
   <div>
-    <!-- Page Header -->
-    <header class="header">
-      <div class="header-inner">
-        <div class="header-logo">
-          <img
-            src="~/assets/images/logo-main.svg"
-            alt=""
-            width="50"
-            height="auto"
-          />
-        </div>
-        <h1 class="header-title">Coding Junction</h1>
-      </div>
-    </header>
-
-    <!-- Main Content -->
-    <main>メインコンテンツ</main>
+    <main>
+      <section>
+        <h1 class="top-title">
+          コーディングで悩んだ人が、いつでも戻れる場所。<br />学び合い、力をつけて、再出発する場所。
+        </h1>
+      </section>
+    </main>
   </div>
 </template>
 
@@ -26,17 +15,13 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-.header {
-  background-color: #fff;
-}
-.header-inner {
-  display: flex;
-  align-items: center;
-}
-.header-title {
-  color: #333;
-}
-main {
-  color: $mainYellow;
+.top-title {
+  text-align: center;
+  font-size: 16px;
+  font-feature-settings: 'palt';
+  letter-spacing: 0.05em;
+  @include mq(md) {
+    font-size: 24px;
+  }
 }
 </style>

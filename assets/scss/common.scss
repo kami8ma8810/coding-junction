@@ -1,3 +1,130 @@
-body{
-  background-color: #fff;
-}
+// // // @use "sass:math";
+
+// // // color
+// // $bodyBg:#f2f4f8;
+// // $mainBlue:#126ab2;
+// // $mainYellow:#e0b336;
+
+// // // ブレイクポイント
+// // $breakpoints: (
+// //   "xs": (max-width: 374px),
+// //   "s": (min-width: 430px),
+// //   "sm": (min-width: 520px),
+// //   "md": (min-width: 768px),
+// //   "mdh": (min-width: 769px),
+// //   "lg": (min-width: 960px),
+// //   "tab": (min-width: 1024px),
+// //   "tabOver": (min-width: 1025px),
+// //   "xl": (min-width: 1366px),
+// //   "xxl": (min-width: 1536px),
+// //   "xxxl": (min-width: 1920px)) !default;
+
+// // //pxをvwに変換
+// // @function vw($size, $viewport: 750) {
+// //   $rate: math.div(100,$viewport);
+// //   @return $rate * $size * 1vw;
+// // }
+// // @function vw_lg($size, $viewport: 1366) {
+// //   $rate: math.div(100,$viewport);
+// //   @return $rate * $size * 1vw;
+// // }
+// // @function vh($size, $viewport: 1334) {
+// //   $rate: math.div(100,$viewport);
+// //   @return $rate * $size * 1vh;
+// // }
+// // @function vh_lg($size, $viewport: 800) {
+// //   $rate: math.div(100,$viewport);
+// //   @return $rate * $size * 1vh;
+// // }
+
+// // // 画像パス
+// // $imgDir: "../img/";
+
+// // // z-indexの管理
+// // $z-index: (body, slider, slider-on, header, header-on, drawer-and-modal, drawer-and-modal-on);
+
+// // @function z-index($module) {
+// //   @return index($z-index, $module);
+// // }
+
+// // // イージング
+// // $easeOutExpo:cubic-bezier(0.16, 1, 0.3, 1);
+// // $easeOutCirc:cubic-bezier(0, 0.55, 0.45, 1);
+// // $easeOutCubic:cubic-bezier(0.33, 1, 0.68, 1);
+// // $easeInCirc:cubic-bezier(0.55, 0, 1, 0.45);
+// // $easeInOutSine:cubic-bezier(0.37, 0, 0.63, 1);
+// // $easeInOutCirc:cubic-bezier(0.65, 0, 0.35, 1);
+// // $easeInOutQuint:cubic-bezier(0.83, 0, 0.17, 1);
+
+// // // font family
+// // $yugothic: "Yu Gothic Medium",
+// //   "游ゴシック Medium",
+// //   YuGothic,
+// //   "游ゴシック体",
+// //   "ヒラギノ角ゴ Pro W3",
+// //   "メイリオ",
+// //   sans-serif;
+
+// html{
+//   text-size-adjust: 100%;
+//   -webkit-tap-highlight-color:transparent;//タップの強調色解除
+//   /* フォントサイズの正確に */
+//   -webkit-text-size-adjust: 100%;
+//   /* 文字をシャープに */
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// body {
+//   background-color: $bodyBg;
+//   font-family: $yugothic,
+//     "Helvetica Neue",
+//     Arial,
+//     "Hiragino Kaku Gothic ProN",
+//     "Hiragino Sans",
+//     Meiryo,
+//     sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   ::selection{
+//     color: $white;
+//     background: $mainYellow;
+//   }
+//   ::-moz-selection{
+//     color: $white;
+//     background: $mainYellow;
+//   }
+
+// }
+
+// a{
+//   transition: opacity .4s $easeOutCubic;
+// }
+// a:hover ,
+// a:active {
+//   opacity: 0.5;
+
+// }
+
+// // PC/SP画像保存禁止
+// img {
+//   // pointer-events: none;
+//   -webkit-touch-callout: none;
+//   -webkit-user-select: none;
+//   -moz-touch-callout: none;
+//   -moz-user-select: none;
+//   user-select: none;
+// }
+
+// // スクリーンリーダー用
+// .sr-only {
+//   position: absolute;
+//   width: 1px;
+//   height: 1px;
+//   padding: 0;
+//   margin: -1px;
+//   overflow: hidden;
+//   clip: rect(0 0 0 0);
+//   clip-path: inset(50%);
+//   white-space: nowrap;
+//   border: 0;
+// }

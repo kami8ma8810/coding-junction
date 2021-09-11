@@ -1,9 +1,11 @@
 <template>
-  <main>
-    <h1>{{ title }}</h1>
-    <p>{{ date }}</p>
-    <div v-html="contents"></div>
-  </main>
+  <div>
+    <main>
+      <h1>{{ title }}</h1>
+      <p>{{ date }}</p>
+      <div v-html="contents"></div>
+    </main>
+  </div>
 </template>
 
 <script>
@@ -14,10 +16,10 @@ export default {
     const { data } = await axios.get(
       `https://coding-junction.microcms.io/api/v1/blog/${params.slug}`,
       {
-        headers: { 'X-API-KEY': 'ba518e2d-72c5-4707-bde8-826fd87237bc' }
+        headers: { 'X-API-KEY': process.env.API_KEY },
       }
     )
     return data
-  }
+  },
 }
 </script>

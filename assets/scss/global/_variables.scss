@@ -1,6 +1,8 @@
 @use "sass:math";
 
 // color
+$white:#ffffff;
+$bodyBg:#f2f4f8;
 $mainBlue:#126ab2;
 $mainYellow:#e0b336;
 
@@ -37,7 +39,7 @@ $breakpoints: (
 }
 
 // 画像パス
-$imgDir: "../images/";
+$imgDir: "../img/";
 
 // z-indexの管理
 $z-index: (body, slider, slider-on, header, header-on, drawer-and-modal, drawer-and-modal-on);
