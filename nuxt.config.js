@@ -43,7 +43,7 @@ export default {
     // { src: '~/assets/scss/style.scss', lang: 'scss' },
   ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/moment-filter', ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -61,7 +61,8 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/style-resources', // グローバルなsass変数を利用
-    'nuxt-webfontloader',
+    'nuxt-webfontloader', //webフォント用
+    ['@nuxtjs/moment', ['ja']], //microCMSの日付をフォーマット
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
