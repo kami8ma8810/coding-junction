@@ -14,7 +14,7 @@ import axios from 'axios'
 export default {
   async asyncData({ params }) {
     const { data } = await axios.get(
-      `https://coding-junction.microcms.io/api/v1/blog/${params.slug}`,
+      `https://coding-junction.microcms.io/api/v1/animation/${params.slug}`,
       {
         headers: { 'X-API-KEY': process.env.API_KEY },
       }

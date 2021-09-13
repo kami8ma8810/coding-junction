@@ -7,10 +7,11 @@
             <img src="~/assets/img/common/logo-main.svg" alt="" />
           </div>
           <p class="header-title__text">
-            <img
+            <!-- <img
               src="~/assets/img/common/text-header-title.svg"
               alt="Coding Junction"
-            />
+            /> -->
+            Coding Junction
           </p>
         </nuxt-link>
         <NavBar />
@@ -36,6 +37,8 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  @include josefin;
+  font-weight: 600;
 }
 .header-title {
   width: 100%;
@@ -43,11 +46,14 @@ export default {
   align-items: center;
 }
 .header-title__logo {
-  width: 30px;
+  width: 32px;
   margin-right: 10px;
+  img {
+    vertical-align: middle;
+  }
 }
 .header-title__text {
-  width: 200px;
+  font-size: 30px;
 }
 .nav {
   display: none;

@@ -61,6 +61,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/style-resources', // グローバルなsass変数を利用
+    'nuxt-webfontloader',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -77,5 +78,11 @@ export default {
   // microCMS
   env: {
     API_KEY,
+  },
+  // webfont
+  webfontloader: {
+    google: {
+      families: ['Lato:400,600,700', 'Josefin+Sans:400,600,700'],
+    },
   },
 }

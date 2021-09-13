@@ -3,8 +3,9 @@
     <nav>
       <ul class="nav-items">
         <li class="nav-item"><nuxt-link to="/">Top</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/about">About</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/blog">Blog</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/about">About</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/contact">Contact</nuxt-link></li>
       </ul>
     </nav>
   </div>
@@ -20,11 +21,11 @@ a.nuxt-link-exact-active {
   align-items: center;
 }
 .nav-item {
-  font-size: vw(20);
+  font-size: 14px;
+  letter-spacing: 0.08em;
   @include mq(md) {
     font-size: 20px;
   }
-  letter-spacing: 0.1em;
   & + .nav-item {
     margin-left: 20px;
   }
