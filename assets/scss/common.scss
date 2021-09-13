@@ -1,0 +1,11 @@
+.c-container{
+  margin-top: 70px;
+}
+.c-page-title {
+  font-size: 16px;
+  text-align: center;
+  @include josefin;
+  @include mq(md) {
+    font-size: 40px;
+  }
+}

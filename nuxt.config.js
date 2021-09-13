@@ -40,7 +40,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     // { src: '~/assets/scss/reset.scss', lang: 'scss' },
-    // { src: '~/assets/scss/style.scss', lang: 'scss' },
+    { src: '~/assets/scss/common.scss', lang: 'scss' },
   ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [{ src: '~/plugins/moment-filter', ssr: false }],
@@ -72,6 +72,7 @@ export default {
   build: {},
   styleResources: {
     scss: [
+      // '~/assets/scss/common.scss',
       '~/assets/scss/global/_variables.scss',
       '~/assets/scss/global/_mixins.scss',
     ],

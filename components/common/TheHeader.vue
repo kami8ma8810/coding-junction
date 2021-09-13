@@ -30,6 +30,8 @@ export default {
 <style lang="scss" scoped>
 .header {
   width: 100%;
+  position: fixed;
+  top: 0;
 }
 .header-inner {
   width: 100%;

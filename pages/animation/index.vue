@@ -1,7 +1,7 @@
 <template>
   <div class="c-container">
     <main class="c-main">
-      <h1 class="page-title">Animation</h1>
+      <h1 class="c-page-title">Animation Examples</h1>
       <ul>
         <li v-for="content in contents" :key="content.id">
           <nuxt-link :to="`/animation/${content.id}`">

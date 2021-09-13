@@ -1,6 +1,6 @@
 <template>
   <div class="c-container">
-    <main class="main">
+    <main class="c-main">
       <h1>{{ title }}</h1>
       <p>{{ new Date() | moment }}</p>
       <div v-html="contents"></div>
