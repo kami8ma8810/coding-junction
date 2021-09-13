@@ -4,6 +4,7 @@
 .c-page-title {
   font-size: 16px;
   text-align: center;
+  color: $mainBrown;
   @include josefin;
   @include mq(md) {
     font-size: 40px;

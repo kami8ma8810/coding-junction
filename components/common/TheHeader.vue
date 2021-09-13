@@ -4,7 +4,7 @@
       <div class="header-inner">
         <nuxt-link to="/" class="header-title">
           <div class="header-title__logo">
-            <img src="~/assets/img/common/logo-main.svg" alt="" />
+            <img src="~/assets/img/common/logo-main-orange.svg" alt="" />
           </div>
           <p class="header-title__text">
             <!-- <img
@@ -34,6 +34,7 @@ export default {
   top: 0;
 }
 .header-inner {
+  background-color: $white;
   width: 100%;
   display: flex;
   align-items: center;

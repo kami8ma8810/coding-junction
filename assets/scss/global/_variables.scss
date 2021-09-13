@@ -1,67 +1,96 @@
 @use "sass:math";
 
 // color
-$white:#ffffff;
-$bodyBg:#f2f4f8;
-$mainBlue:#126ab2;
-$mainYellow:#e0b336;
-
+$black:#222222;
+$white: #ffffff;
+// $bodyBg: #fef9f2;
+$bodyBg: #fffcee;
+$mainBlue: #1185ae;
+$mainOrange: #f4810e;
+$mainYellow:#ffed00;
+$mainBrown:#a48b77;
 // ブレイクポイント
 $breakpoints: (
-  "xs": (max-width: 374px),
-  "s": (min-width: 430px),
-  "sm": (min-width: 520px),
-  "md": (min-width: 768px),
-  "mdh": (min-width: 769px),
-  "lg": (min-width: 960px),
-  "tab": (min-width: 1024px),
-  "tabOver": (min-width: 1025px),
-  "xl": (min-width: 1366px),
-  "xxl": (min-width: 1536px),
-  "xxxl": (min-width: 1920px)) !default;
+  'xs': (
+    max-width: 374px,
+  ),
+  's': (
+    min-width: 430px,
+  ),
+  'sm': (
+    min-width: 520px,
+  ),
+  'md': (
+    min-width: 768px,
+  ),
+  'mdh': (
+    min-width: 769px,
+  ),
+  'lg': (
+    min-width: 960px,
+  ),
+  'tab': (
+    min-width: 1024px,
+  ),
+  'tabOver': (
+    min-width: 1025px,
+  ),
+  'xl': (
+    min-width: 1366px,
+  ),
+  'xxl': (
+    min-width: 1536px,
+  ),
+  'xxxl': (
+    min-width: 1920px,
+  ),
+) !default;
 
 //pxをvwに変換
 @function vw($size, $viewport: 750) {
-  $rate: math.div(100,$viewport);
+  $rate: math.div(100, $viewport);
   @return $rate * $size * 1vw;
 }
 @function vw_lg($size, $viewport: 1366) {
-  $rate: math.div(100,$viewport);
+  $rate: math.div(100, $viewport);
   @return $rate * $size * 1vw;
 }
 @function vh($size, $viewport: 1334) {
-  $rate: math.div(100,$viewport);
+  $rate: math.div(100, $viewport);
   @return $rate * $size * 1vh;
 }
 @function vh_lg($size, $viewport: 800) {
-  $rate: math.div(100,$viewport);
+  $rate: math.div(100, $viewport);
   @return $rate * $size * 1vh;
 }
 
 // 画像パス
-$imgDir: "../img/";
+$imgDir: '../img/';
 
 // z-indexの管理
-$z-index: (body, slider, slider-on, header, header-on, drawer-and-modal, drawer-and-modal-on);
+$z-index: (
+  body,
+  slider,
+  slider-on,
+  header,
+  header-on,
+  drawer-and-modal,
+  drawer-and-modal-on
+);
 
 @function z-index($module) {
   @return index($z-index, $module);
 }
 
 // イージング
-$easeOutExpo:cubic-bezier(0.16, 1, 0.3, 1);
-$easeOutCirc:cubic-bezier(0, 0.55, 0.45, 1);
-$easeOutCubic:cubic-bezier(0.33, 1, 0.68, 1);
-$easeInCirc:cubic-bezier(0.55, 0, 1, 0.45);
-$easeInOutSine:cubic-bezier(0.37, 0, 0.63, 1);
-$easeInOutCirc:cubic-bezier(0.65, 0, 0.35, 1);
-$easeInOutQuint:cubic-bezier(0.83, 0, 0.17, 1);
+$easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
+$easeOutCirc: cubic-bezier(0, 0.55, 0.45, 1);
+$easeOutCubic: cubic-bezier(0.33, 1, 0.68, 1);
+$easeInCirc: cubic-bezier(0.55, 0, 1, 0.45);
+$easeInOutSine: cubic-bezier(0.37, 0, 0.63, 1);
+$easeInOutCirc: cubic-bezier(0.65, 0, 0.35, 1);
+$easeInOutQuint: cubic-bezier(0.83, 0, 0.17, 1);
 
 // font family
-$yugothic: "Yu Gothic Medium",
-  "游ゴシック Medium",
-  YuGothic,
-  "游ゴシック体",
-  "ヒラギノ角ゴ Pro W3",
-  "メイリオ",
-  sans-serif;
+$yugothic: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体',
+  'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;

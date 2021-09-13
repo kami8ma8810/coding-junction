@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  color: $black;
   background-color: $bodyBg;
   font-family: $yugothic,
     "Helvetica Neue",
@@ -20,11 +21,11 @@ body {
   -webkit-font-smoothing: antialiased;
   ::selection{
     color: $white;
-    background: $mainYellow;
+    background: $mainOrange;
   }
   ::-moz-selection{
     color: $white;
-    background: $mainYellow;
+    background: $mainOrange;
   }
 }
 
