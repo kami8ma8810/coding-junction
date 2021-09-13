@@ -3,6 +3,9 @@
     <nav>
       <ul class="nav-items">
         <li class="nav-item"><nuxt-link to="/">Top</nuxt-link></li>
+        <li class="nav-item">
+          <nuxt-link to="/animation">Animation</nuxt-link>
+        </li>
         <li class="nav-item"><nuxt-link to="/blog">Blog</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/about">About</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/contact">Contact</nuxt-link></li>
