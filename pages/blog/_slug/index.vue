@@ -3,6 +3,7 @@
     <main class="c-main">
       <h1>{{ title }}</h1>
       <p>{{ new Date() | moment }}</p>
+      <p>{{ category && category.name }}</p>
       <div v-html="contents"></div>
     </main>
   </div>
