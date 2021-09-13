@@ -2,7 +2,7 @@
   <div class="c-container">
     <main class="main">
       <h1>{{ title }}</h1>
-      <p>{{ date }}</p>
+      <p>{{ new Date() | moment }}</p>
       <div v-html="contents"></div>
     </main>
   </div>
