@@ -1,9 +1,9 @@
 <template>
   <div class="c-container">
     <main class="c-main">
-      <h1>{{ title }}</h1>
+      <h1 class="c-article-title">{{ title }}</h1>
       <p>{{ new Date() | moment }}</p>
-      <p>{{ category && category.name }}</p>
+      <p>{{ category && category.categoryName }}</p>
       <div v-html="contents"></div>
     </main>
   </div>

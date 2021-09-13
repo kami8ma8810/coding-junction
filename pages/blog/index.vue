@@ -1,6 +1,6 @@
 <template>
   <div class="c-container">
-    <main class="c-main">
+    <main class="c-main c-article-wrap">
       <h1 class="c-page-title">Blog about updates</h1>
       <ul>
         <li v-for="content in contents" :key="content.id">

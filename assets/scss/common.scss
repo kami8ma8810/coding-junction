@@ -10,3 +10,10 @@
     font-size: 40px;
   }
 }
+.c-article-content{
+  @include minmoji;
+  line-height: 1.7;
+}
+.c-article-title{
+  font-size: 24px;
+}

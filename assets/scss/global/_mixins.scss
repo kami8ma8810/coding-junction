@@ -60,6 +60,17 @@
     'ヒラギノ明朝 Pro', 'Hiragino Mincho Pro', 'MS P明朝', 'MS PMincho', serif;
 }
 
+@font-face {
+  font-family: minmoji;
+  src: url('https://minmoji.ucda.jp/fontseot/https%3A__coding-junction.com');
+  src: local('minmoji'),
+      url('https://minmoji.ucda.jp/fontswoff/https%3A__coding-junction.com') format('woff'),
+      url('https://minmoji.ucda.jp/fonts/https%3A__coding-junction.com') format('opentype');
+}
+@mixin minmoji{
+    font-family: minmoji;
+}
+
 // 2行以上は文末を「…」にする（デフォルトは2行
 @mixin clamp($line: 2) {
   display: -webkit-box;
