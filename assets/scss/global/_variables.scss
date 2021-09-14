@@ -1,14 +1,15 @@
 @use "sass:math";
 
 // color
-$black:#222222;
+$black: #333333;
 $white: #ffffff;
 // $bodyBg: #fef9f2;
-$bodyBg: #fffcee;
-$mainBlue: #1185ae;
+$bodyBg: #f4f4f4;
+$mainBlue: #91c3e0;
 $mainOrange: #f4810e;
-$mainYellow:#ffed00;
-$mainBrown:#a48b77;
+$mainPink: #faa49b;
+$mainYellow: #ffed00;
+$mainBrown: #a48b77;
 // ブレイクポイント
 $breakpoints: (
   'xs': (

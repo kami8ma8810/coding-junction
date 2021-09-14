@@ -17,7 +17,7 @@
 <style lang="scss" scoped>
 /* nuxt-link-exact-active : 現在のURLとリンク先のURLが完全に一致する場合 */
 a.nuxt-link-exact-active {
-  background: linear-gradient(transparent 70%, $mainYellow 70%);
+  background: linear-gradient(transparent 70%, $mainPink 70%);
 }
 .nav-items {
   display: flex;
