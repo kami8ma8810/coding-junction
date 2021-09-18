@@ -21,11 +21,11 @@ body {
   -webkit-font-smoothing: antialiased;
   ::selection{
     color: $white;
-    background: $mainBlue;
+    background: $colorDarkBlue;
   }
   ::-moz-selection{
     color: $white;
-    background: $mainBlue;
+    background: $colorDarkBlue;
   }
 }
 

@@ -4,7 +4,7 @@
       <div class="header-inner">
         <nuxt-link to="/" class="header-title">
           <div class="header-title__logo">
-            <img src="~/assets/img/common/logo-main-orange.svg" alt="" />
+            <img src="~/assets/img/common/header-logo.svg" alt="" />
           </div>
           <p class="header-title__text">
             <!-- <img

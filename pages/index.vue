@@ -3,8 +3,7 @@
     <main class="c-main">
       <section>
         <h1 class="top-title">
-          実務で役立つコーディングの知識・スキルがここに。<br />Coding
-          Junctionから再び出発しよう。
+          TOP PAG TITLE
         </h1>
       </section>
     </main>

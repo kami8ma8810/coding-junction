@@ -13,7 +13,7 @@ export default {}
 <style lang="scss" scoped>
 .footer {
   width: 100%;
-  background-color: $mainBlue;
+  background-color: $colorDarkBlue;
   color: $white;
   @include yugo;
 }
