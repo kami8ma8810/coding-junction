@@ -20,8 +20,8 @@ export default {
     const { data } = await axios.get(
       'https://coding-junction.microcms.io/api/v1/blog',
       {
-        headers: { 'X-API-KEY': process.env.API_KEY },
-        // headers: { 'X-API-KEY': 'ba518e2d-72c5-4707-bde8-826fd87237bc' },
+        // headers: { 'X-API-KEY': process.env.API_KEY },
+        headers: { 'X-API-KEY': 'ba518e2d-72c5-4707-bde8-826fd87237bc' },
       }
     )
     return data
