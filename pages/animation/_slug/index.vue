@@ -4,9 +4,9 @@
       <h1 class="c-article-title">{{ title }}</h1>
       <p>{{ new Date() | moment }}</p>
       <ul class="category-items">
-        <li>{{ category && category.categoryName }}</li>
+        <!-- <li>{{ category && category.name }}</li> -->
       </ul>
-      <div v-html="contents"></div>
+      <div v-html="contents" class="c-article-content"></div>
     </main>
   </div>
 </template>
