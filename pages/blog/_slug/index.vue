@@ -3,8 +3,12 @@
     <main class="c-main">
       <h1 class="c-article-title">{{ title }}</h1>
       <p>{{ new Date() | moment }}</p>
-      <ul class="category-items">
-        <li>{{ category && category.name }}</li>
+      <ul>
+        <li v-for="category in categories" :key="category.id" class="list">
+          <nuxt-link :to="`/category/${category.id}/page/1`" class="link">{{
+            category.name
+          }}</nuxt-link>
+        </li>
       </ul>
       <div v-html="contents" class="c-article-content"></div>
     </main>
