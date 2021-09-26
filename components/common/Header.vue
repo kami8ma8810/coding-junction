@@ -15,15 +15,18 @@
           </p>
         </nuxt-link>
         <NavBar />
+        <HamburgerMenu />
       </div>
     </header>
   </div>
 </template>
 <script>
 import NavBar from '@/components/common/NavBar.vue'
+import HamburgerMenu from '@/components/common/HamburgerMenu.vue'
 export default {
   components: {
     NavBar,
+    HamburgerMenu
   },
 }
 </script>

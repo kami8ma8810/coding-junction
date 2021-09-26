@@ -2,14 +2,12 @@
   <div class="c-container">
     <main class="c-main">
       <h1 class="c-article-title">{{ title }}</h1>
-      <p>{{ new Date() | moment }}</p>
+      <time>{{ date | formatDate }}</time>
       <ul>
-        <li v-for="category in categories" :key="category.id" class="list">
-          <nuxt-link :to="`/category/${category.id}/page/1`" class="link">{{
-            category.name
-          }}</nuxt-link>
-        </li>
-      </ul>
+				<li v-for="categoryItem in category" v-bind:key="categoryItem.id">
+					{{ categoryItem.name }}
+				</li>
+			</ul>
       <div v-html="contents" class="c-article-content"></div>
     </main>
   </div>
@@ -27,6 +25,7 @@ export default {
         headers: { 'X-API-KEY': 'ba518e2d-72c5-4707-bde8-826fd87237bc' },
       }
     )
+    console.log(data);
     return data
   },
 }

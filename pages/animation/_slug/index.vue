@@ -2,10 +2,12 @@
   <div class="c-container">
     <main class="c-main">
       <h1 class="c-article-title">{{ title }}</h1>
-      <p>{{ new Date() | moment }}</p>
-      <ul class="category-items">
-        <li>{{ category && category.name }}</li>
-      </ul>
+      <time>{{ date | formatDate }}</time>
+      <ul class="items">
+				<li v-for="categoryItem in category" v-bind:key="categoryItem.id" class="item">
+					{{ categoryItem.name }}
+				</li>
+			</ul>
       <div v-html="contents" class="c-article-content"></div>
     </main>
   </div>
@@ -23,6 +25,7 @@ export default {
         headers: { 'X-API-KEY': 'ba518e2d-72c5-4707-bde8-826fd87237bc' },
       }
     )
+    console.log(data);
     return data
   },
 }

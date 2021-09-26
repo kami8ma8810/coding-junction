@@ -59,6 +59,7 @@ img {
 
 .c-container{
   margin-top: 70px;
+  min-height: 200vh;//あとで消す
 }
 .c-main{
   width: 92%;
@@ -74,6 +75,11 @@ img {
   @include josefin;
   @include mq(md) {
     font-size: 40px;
+  }
+  &__small{
+    @include mq(md) {
+    font-size: 24px
+    }
   }
 }
 .c-article-content{

@@ -1,8 +1,9 @@
 import Sass from 'sass'
 // import Fiber from 'fibers'
 require('dotenv').config()
-const { API_KEY } = process.env
+const { API_KEY,API_URL } = process.env
 const axios = require('axios')
+const cheerio = require('cheerio') //nuxt generateでの不要ファイルを削除するプラグイン
 
 const siteUrl = 'https://coding-junction.com/'
 const siteName = 'Coding Junction'
@@ -43,7 +44,7 @@ export default {
     { src: '~/assets/scss/common.scss', lang: 'scss' },
   ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '~/plugins/moment-filter', ssr: false }],
+  plugins: ['~/plugins/filter.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -62,7 +63,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/style-resources', // グローバルなsass変数を利用
     'nuxt-webfontloader', //webフォント用
-    ['@nuxtjs/moment', ['ja']], //microCMSの日付をフォーマット
+    // ['@nuxtjs/moment', ['ja']], //microCMSの日付をフォーマット
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -78,13 +79,23 @@ export default {
     ],
   },
   // microCMS
-  env: {
-    API_KEY,
-  },
+  // publicRuntimeConfig:{
+  //   apiUrl:API_URL
+  // },
+  // privateRuntimeConfig:{
+  //   apiKey:API_KEY
+  // },
   // webfont
   webfontloader: {
     google: {
       families: ['Lato:400,600,700', 'Josefin+Sans:400,600,700'],
+    },
+  },
+  hooks: {
+    'generate:page': (page) => {
+      const doc = cheerio.load(page.html)
+      doc(`body script`).remove()
+      page.html = doc.html()
     },
   },
 }

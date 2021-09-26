@@ -2,7 +2,7 @@
   <div class="nav">
     <nav>
       <ul class="nav-items">
-        <li class="nav-item"><nuxt-link to="/">Top</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/">Home</nuxt-link></li>
         <li class="nav-item">
           <nuxt-link to="/animation">Animation</nuxt-link>
         </li>
@@ -30,7 +30,7 @@ a.nuxt-link-exact-active {
     font-size: 20px;
   }
   & + .nav-item {
-    margin-left: 20px;
+    margin-left: 24px;
   }
 }
 </style>
