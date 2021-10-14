@@ -1,19 +1,18 @@
 <template>
   <!-- layoutファイル内には必ず</nuxt>を記述。この</nuxt>部分でpagesの中身が展開される -->
   <div>
-    <Header />
-    <Nav-bar />
+    <TheHeader />
     <Nuxt />
-    <Footer />
+    <TheFooter />
   </div>
 </template>
 <script>
-import Header from '@/components/common/Header.vue'
-import Footer from '@/components/common/Footer.vue'
+import TheHeader from '@/components/common/TheHeader.vue'
+import TheFooter from '~/components/common/TheFooter.vue'
 export default {
   components: {
-    Header,
-    Footer,
+    TheHeader,
+    TheFooter,
   },
 }
 </script>

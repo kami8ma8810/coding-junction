@@ -13,18 +13,17 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
-
 export default {
-  async asyncData() {
-    const { data } = await axios.get(
-      'https://coding-junction.microcms.io/api/v1/animation',
-      {
-        // headers: { 'X-API-KEY': process.env.API_KEY },
-        headers: { 'X-API-KEY': 'ba518e2d-72c5-4707-bde8-826fd87237bc' },
-      }
-    )
+  async asyncData({ $microcms }) {
+    const data = await $microcms.get({
+      endpoint: 'animation',
+    })
     return data
+  },
+  head(){
+    return{
+      title: 'Animation',
+    }
   },
 }
 </script>

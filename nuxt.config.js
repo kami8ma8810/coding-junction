@@ -1,7 +1,8 @@
 import Sass from 'sass'
 // import Fiber from 'fibers'
+import open from 'open';
 require('dotenv').config()
-const { API_KEY,API_URL } = process.env
+const { API_KEY } = process.env
 const axios = require('axios')
 const cheerio = require('cheerio') //nuxt generateでの不要ファイルを削除するプラグイン
 
@@ -44,7 +45,11 @@ export default {
     { src: '~/assets/scss/common.scss', lang: 'scss' },
   ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/filter.js'],
+  plugins: [
+    { src: '~/plugins/filter' },
+    { src: '~/plugins/vue-mq' },
+    { src: '~/plugins/swiper', mode: 'client' },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -55,6 +60,7 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    'nuxt-microcms-module',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -65,6 +71,15 @@ export default {
     'nuxt-webfontloader', //webフォント用
     // ['@nuxtjs/moment', ['ja']], //microCMSの日付をフォーマット
   ],
+
+  // microCMS
+  microcms: {
+    options: {
+      serviceDomain: process.env.SERVICE_DOMAIN,
+      apiKey: process.env.API_KEY,
+    },
+    mode: process.env.NODE_ENV === 'production' ? 'server' : 'all',
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
@@ -78,13 +93,6 @@ export default {
       '~/assets/scss/global/_mixins.scss',
     ],
   },
-  // microCMS
-  // publicRuntimeConfig:{
-  //   apiUrl:API_URL
-  // },
-  // privateRuntimeConfig:{
-  //   apiKey:API_KEY
-  // },
   // webfont
   webfontloader: {
     google: {
@@ -97,5 +105,12 @@ export default {
       doc(`body script`).remove()
       page.html = doc.html()
     },
+    //ローカルサーバー自動起動
+    listen(server,{host,port}){
+      open(`http://${host}:${port}`);
+    }
+  },
+  env: {
+    API_KEY,
   },
 }

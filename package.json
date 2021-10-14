@@ -33,7 +33,10 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
+    "gsap": "^3.7.1",
+    "ismobilejs": "^1.1.1",
     "luxon": "^2.0.2",
+    "open": "^8.3.0",
     "prettier": "^2.3.2",
     "sass": "^1.39.0",
     "sass-loader": "^10.2.0",
@@ -43,7 +46,10 @@
     "stylelint-config-standard-scss": "^1.1.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.4.0",
     "stylelint-scss": "^3.20.1",
+    "swiper": "^5.4.5",
     "ua-parser-js": "^0.7.28",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-mq": "^1.0.1",
     "vue-scrollto": "^2.20.0"
   }
 }

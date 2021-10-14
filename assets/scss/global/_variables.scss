@@ -1,8 +1,9 @@
 @use "sass:math";
 
 // color
-$black: #333333;
-$colorTextBlack: #333333;
+$black: #000000;
+$colorTextBlack: #000000;
+$colorTextGray: #777777;
 $white: #ffffff;
 // $bodyBg: #fef9f2;
 $bodyBg: #f4f4f4;
@@ -69,23 +70,6 @@ $breakpoints: (
   @return $rate * $size * 1vh;
 }
 
-// 画像パス
-$imgDir: '../img/';
-
-// z-indexの管理
-$z-index: (
-  body,
-  slider,
-  slider-on,
-  header,
-  header-on,
-  drawer-and-modal,
-  drawer-and-modal-on
-);
-
-@function z-index($module) {
-  @return index($z-index, $module);
-}
 
 // イージング
 $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);

@@ -23,18 +23,23 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 
 export default {
-  async asyncData() {
-    const { data } = await axios.get(
-      'https://coding-junction.microcms.io/api/v1/blog',
-      // `${$config.apiUrl}/blog`,
-      {
-        // headers: { 'X-API-KEY': $config.apiKey },/
-        headers: { 'X-API-KEY': 'ba518e2d-72c5-4707-bde8-826fd87237bc' },
-      }
-    )
+  // async asyncData() {
+  //   const { data } = await axios.get(
+  //     'https://coding-junction.microcms.io/api/v1/blog',
+  //     {
+  //       // headers: { 'X-API-KEY': process.env.API_KEY },
+  //       headers: { 'X-API-KEY': 'ba518e2d-72c5-4707-bde8-826fd87237bc' },
+  //     }
+  //   )
+  //   return data
+  // },
+  async asyncData({ $microcms }) {
+    const data = await $microcms.get({
+      endpoint: 'blog',
+    })
     return data
   },
 }

@@ -1,32 +1,25 @@
 body {
   color: $colorTextBlack;
   background-color: $bodyBg;
-  font-family: $yugothic,
-    "Helvetica Neue",
-    Arial,
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    Meiryo,
-    sans-serif;
+  font-family: $yugothic, 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', Meiryo, sans-serif;
   -webkit-font-smoothing: antialiased;
-  ::selection{
+  ::selection {
     color: $white;
     background: $colorDarkBlue;
   }
-  ::-moz-selection{
+  ::-moz-selection {
     color: $white;
     background: $colorDarkBlue;
   }
 }
 
-
-a{
-  transition: opacity .4s $easeOutCubic;
+a {
+  transition: opacity 0.4s $easeOutCubic;
 }
-a:hover ,
+a:hover,
 a:active {
   opacity: 0.5;
-
 }
 
 // PC/SP画像保存禁止
@@ -57,16 +50,23 @@ img {
 //  common style
 //===================================================
 
-.c-container{
-  margin-top: 70px;
-  min-height: 200vh;//あとで消す
-}
-.c-main{
-  width: 92%;
-  margin-left:auto;
-  margin-right:auto;
-  max-width: 1000px;
+.c-container {
+  margin-top: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  overflow: hidden;
+  @include mq(lg) {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
+}
+.c-main {
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  @include minmoji;
+}
 
 .c-page-title {
   font-size: 16px;
@@ -76,16 +76,58 @@ img {
   @include mq(md) {
     font-size: 40px;
   }
-  &__small{
+  &__small {
     @include mq(md) {
-    font-size: 24px
+      font-size: 24px;
     }
   }
 }
-.c-article-content{
+.c-article-content {
   @include minmoji;
   line-height: 1.7;
 }
-.c-article-title{
+
+.c-article-title {
   font-size: 24px;
+  margin-bottom: 20px;
+}
+.c-thumbnail {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  img{
+    object-fit: contain;
+  }
+}
+.c-timestamp{
+  display: block;
+  margin-bottom: 20px;
+  img{
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+}
+.c-article-time{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  color: $colorTextGray;
+}
+.c-category-items{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.c-category-item{
+  display: inline-block;
+  color: $colorLightPink;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 2px solid $colorLightPink;
+  border-radius: 4px;
+  & + &{
+    margin-left: 1em;
+  }
 }

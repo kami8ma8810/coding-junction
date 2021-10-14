@@ -2,13 +2,13 @@
   <div class="nav">
     <nav>
       <ul class="nav-items">
-        <li class="nav-item"><nuxt-link to="/">Home</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/" exact>Home</nuxt-link></li>
         <li class="nav-item">
           <nuxt-link to="/animation">Animation</nuxt-link>
         </li>
         <li class="nav-item"><nuxt-link to="/blog">Blog</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/about">About</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/contact">Contact</nuxt-link></li>
+        <!-- <li class="nav-item"><nuxt-link to="/about">About</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/contact">Contact</nuxt-link></li> -->
       </ul>
     </nav>
   </div>
@@ -16,7 +16,7 @@
 
 <style lang="scss" scoped>
 /* nuxt-link-exact-active : 現在のURLとリンク先のURLが完全に一致する場合 */
-a.nuxt-link-exact-active {
+a.nuxt-link-active {
   background: linear-gradient(transparent 70%, $colorLightPink 70%);
 }
 .nav-items {

@@ -14,8 +14,8 @@
             Coding Junction
           </p>
         </nuxt-link>
-        <NavBar />
-        <HamburgerMenu />
+        <NavBar v-if="$mq === 'infinity'"/>
+        <HamburgerMenu v-if="$mq === 'lg'"/>
       </div>
     </header>
   </div>
@@ -26,7 +26,7 @@ import HamburgerMenu from '@/components/common/HamburgerMenu.vue'
 export default {
   components: {
     NavBar,
-    HamburgerMenu
+    HamburgerMenu,
   },
 }
 </script>
@@ -39,6 +39,7 @@ export default {
 .header-inner {
   background-color: $white;
   width: 100%;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,7 +48,6 @@ export default {
   font-weight: 600;
 }
 .header-title {
-  width: 100%;
   display: flex;
   align-items: center;
 }
@@ -59,12 +59,11 @@ export default {
   }
 }
 .header-title__text {
-  font-size: 30px;
-}
-.nav {
-  display: none;
-  @include mq(md) {
-    display: block;
+  font-size: 24px;
+  white-space: nowrap;
+  @include mq(lg) {
+    font-size: 30px;
   }
 }
+
 </style>
