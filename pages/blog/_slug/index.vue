@@ -14,18 +14,27 @@
 </template>
 
 <script>
+import cheerio from 'cheerio';
+import hljs from 'highlight.js';
 export default {
   async asyncData({ params, $microcms }) {
     const data = await $microcms.get({
       endpoint: 'blog',
       contentId: params.slug,
-    })
-    return data
+    });
+    // シンタックスハイライト
+    const $ = cheerio.load(data.contents);
+    $('pre code').each((_, elm) => {
+      const result = hljs.highlightAuto($(elm).text());
+      $(elm).html(result.value);
+      $(elm).addClass('hljs');
+    });
+    return { ...data, contents: $.html() };
   },
   head() {
     return {
       title: this.title,
-    }
+    };
   },
-}
+};
 </script>
