@@ -14,9 +14,10 @@
 </template>
 <script>
 export default {
-  async asyncData({ $microcms }) {
+  async asyncData({ params, $microcms }) {
     const data = await $microcms.get({
       endpoint: 'animation',
+      contentId: params.slug,
     })
     return data
   },

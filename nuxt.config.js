@@ -1,15 +1,15 @@
-import Sass from 'sass'
+import Sass from 'sass';
 // import Fiber from 'fibers'
 import open from 'open';
-require('dotenv').config()
-const { API_KEY } = process.env
-const axios = require('axios')
-const cheerio = require('cheerio') //nuxt generateでの不要ファイルを削除するプラグイン
+require('dotenv').config();
+const { API_KEY, SERVICE_ID } = process.env;
+const axios = require('axios');
+const cheerio = require('cheerio'); //nuxt generateでの不要ファイルを削除するプラグイン
 
-const siteUrl = 'https://coding-junction.com/'
-const siteName = 'Coding Junction'
+const siteUrl = 'https://coding-junction.com/';
+const siteName = 'Coding Junction';
 const siteDesc =
-  'Coding Junctionは、コーディングをする人がいつでも戻れる場所。交流して学び合い、再出発する場所。'
+  'Coding Junctionは、コーディングをする人がいつでも戻れる場所。交流して学び合い、再出発する場所。';
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -43,6 +43,12 @@ export default {
   css: [
     // { src: '~/assets/scss/reset.scss', lang: 'scss' },
     { src: '~/assets/scss/common.scss', lang: 'scss' },
+
+    {
+      // シンタックスハイライト テーマ参照先：https://highlightjs.org/static/demo/
+      src: '~/node_modules/highlight.js/styles/atom-one-dark.css',
+      lang: 'css',
+    },
   ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -72,20 +78,21 @@ export default {
     // ['@nuxtjs/moment', ['ja']], //microCMSの日付をフォーマット
   ],
 
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {},
+
   // microCMS
   microcms: {
     options: {
-      serviceDomain: process.env.SERVICE_DOMAIN,
-      apiKey: process.env.API_KEY,
+      serviceDomain: SERVICE_ID,
+      apiKey: API_KEY,
     },
     mode: process.env.NODE_ENV === 'production' ? 'server' : 'all',
   },
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
   styleResources: {
     scss: [
       // '~/assets/scss/common.scss',
@@ -100,17 +107,15 @@ export default {
     },
   },
   hooks: {
+    // generate時に生成される不要なタグを削除
     'generate:page': (page) => {
       const doc = cheerio.load(page.html)
       doc(`body script`).remove()
       page.html = doc.html()
     },
     //ローカルサーバー自動起動
-    listen(server,{host,port}){
-      open(`http://${host}:${port}`);
-    }
+    listen(server, { host, port }) {
+      open(`http://${host}:${port}`)
+    },
   },
-  env: {
-    API_KEY,
-  },
-}
+};

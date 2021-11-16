@@ -8,9 +8,9 @@
         class="c-category-item"
       >
         {{ categoryItem.name }}
-        <!-- <nuxt-lin :to="`/category/${category.id}`" class="link">
+        <nuxt-link :to="`/category/${category.id}`" class="link">
           {{ categoryItem.name }}
-        </nuxt-lin> -->
+        </nuxt-link>
       </li>
     </ul>
   </div>

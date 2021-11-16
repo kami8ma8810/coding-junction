@@ -7,13 +7,13 @@
           JunctionではGSAPをメインに、<br>ライブラリを使用したアニメーションの実装について発信しています。
         </h1>
         <div class="swiper-area">
-          <client-only>
+          <!-- <client-only>
             <swiper :options="swiperOption">
               <swiper-slide v-for="(slide, index) in contents" :key="index">
                 <img :src="slide.image.url" :alt="slide.alt" />
               </swiper-slide>
             </swiper>
-          </client-only>
+          </client-only> -->
           <!-- <div slot="pagination" class="swiper-pagination" />
           <div slot="button-prev" class="swiper-button-prev" />
           <div slot="button-next" class="swiper-button-next" /> -->
@@ -25,12 +25,13 @@
 
 <script>
 export default {
-  async asyncData({ $microcms }) {
-    const slide = await $microcms.get({
-      endpoint: 'slide',
-    })
-    return slide
-  },
+  // async asyncData({ params,$microcms }) {
+  //   const slide = await $microcms.get({
+  //     endpoint: 'slide',
+  //     contentId: params.slug,
+  //   })
+  //   return slide
+  // },
   data() {
     return {
       swiperOption: {

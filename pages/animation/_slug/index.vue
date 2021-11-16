@@ -16,34 +16,46 @@
           :key="categoryItem.id"
           class="c-category-item"
         >
-          <nuxt-lin :to="`/category/${category.id}`" class="link">
+          <nuxt-link :to="`/category/${category.id}`" class="link">
             {{ categoryItem.name }}
-          </nuxt-lin>
+          </nuxt-link>
         </li>
       </ul>
       <span class="c-timestamp"
-        ><img src="~/assets/img/common/icon-clock-gray.svg" alt="" width="14" height="14" /><time
-          class="c-article-time"
-          >{{ date | formatDate }}</time
-        ></span>
+        ><img
+          src="~/assets/img/common/icon-clock-gray.svg"
+          alt=""
+          width="14"
+          height="14"
+        /><time class="c-article-time">{{ date | formatDate }}</time></span
+      >
       <div class="c-article-content" v-html="contents"></div>
     </main>
   </div>
 </template>
 
 <script>
+import cheerio from 'cheerio';
+import hljs from 'highlight.js';
 export default {
   async asyncData({ params, $microcms }) {
     const data = await $microcms.get({
       endpoint: 'animation',
       contentId: params.slug,
-    })
-    return data
+    });
+    // シンタックスハイライト
+    const $ = cheerio.load(data.contents);
+    $('pre code').each((_, elm) => {
+      const result = hljs.highlightAuto($(elm).text());
+      $(elm).html(result.value);
+      $(elm).addClass('hljs');
+    });
+    return { ...data, contents: $.html() };
   },
   head() {
     return {
       title: this.title,
-    }
+    };
   },
-}
+};
 </script>
