@@ -1,34 +1,32 @@
 <template>
-  <div>
-    <header class="header">
-      <div class="header-inner">
-        <nuxt-link to="/" class="header-title">
-          <div class="header-title__logo">
-            <img src="~/assets/img/common/header-logo.svg" alt="" />
-          </div>
-          <p class="header-title__text">
-            <!-- <img
+  <header class="header">
+    <div class="header-inner">
+      <nuxt-link to="/" class="header-title">
+        <div class="header-title__logo">
+          <img src="~/assets/img/common/header-logo.svg" alt="" />
+        </div>
+        <p class="header-title__text">
+          <!-- <img
               src="~/assets/img/common/text-header-title.svg"
               alt="Coding Junction"
             /> -->
-            Coding Junction
-          </p>
-        </nuxt-link>
-        <NavBar v-if="$mq === 'infinity'"/>
-        <HamburgerMenu v-if="$mq === 'lg'"/>
-      </div>
-    </header>
-  </div>
+          Coding Junction
+        </p>
+      </nuxt-link>
+      <NavBar v-if="$mq === 'infinity'" />
+      <HamburgerMenu v-if="$mq === 'lg'" />
+    </div>
+  </header>
 </template>
 <script>
-import NavBar from '@/components/common/NavBar.vue'
-import HamburgerMenu from '@/components/common/HamburgerMenu.vue'
+import NavBar from '@/components/common/NavBar.vue';
+import HamburgerMenu from '@/components/common/HamburgerMenu.vue';
 export default {
   components: {
     NavBar,
     HamburgerMenu,
   },
-}
+};
 </script>
 <style lang="scss" scoped>
 .header {
@@ -65,5 +63,4 @@ export default {
     font-size: 30px;
   }
 }
-
 </style>

@@ -151,6 +151,7 @@ const MENU = [
     transform: rotate(-90deg);
   }
 }
+
 .global-nav {
   width: 100%;
   height: 100vh;
@@ -160,12 +161,14 @@ const MENU = [
   bottom: 0;
   left: 0;
   z-index: 2;
-  background-color: $colorLightPink;
+  // background-color: $colorLightPink;
+  background-color: $colorDarkBlue;
   color: $white;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .menu__item {
   font-size: 40px;
   & + .menu__item {

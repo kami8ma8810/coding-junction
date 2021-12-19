@@ -12,7 +12,7 @@ $colorDarkBlue: #01589d;
 $colorLightBlue: #4c9ef7;
 // $mainOrange: #f4810e;
 $colorLightPink: #faa49b;
-$colorPink:#ef5b7f;
+$colorPink: #ef5b7f;
 $mainYellow: #ffed00;
 $mainBrown: #a48b77;
 // ブレイクポイント
@@ -69,7 +69,6 @@ $breakpoints: (
   $rate: math.div(100, $viewport);
   @return $rate * $size * 1vh;
 }
-
 
 // イージング
 $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);

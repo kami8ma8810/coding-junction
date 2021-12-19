@@ -1,14 +1,12 @@
 <template>
-  <div>
-    <footer class="footer">
-      <div class="footer-inner">
-        <p class="copyright text-muted">&copy; 2021 上かるび</p>
-      </div>
-    </footer>
-  </div>
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="copyright text-muted">&copy; 2021 上かるび</p>
+    </div>
+  </footer>
 </template>
 <script>
-export default {}
+export default {};
 </script>
 <style lang="scss" scoped>
 .footer {

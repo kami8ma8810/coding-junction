@@ -90,6 +90,10 @@ export default {
     mode: process.env.NODE_ENV === 'production' ? 'server' : 'all',
   },
 
+  // env: {
+  //   API_KEY,
+  // },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
@@ -109,13 +113,13 @@ export default {
   hooks: {
     // generate時に生成される不要なタグを削除
     'generate:page': (page) => {
-      const doc = cheerio.load(page.html)
-      doc(`body script`).remove()
-      page.html = doc.html()
+      const doc = cheerio.load(page.html);
+      doc(`body script`).remove();
+      page.html = doc.html();
     },
     //ローカルサーバー自動起動
     listen(server, { host, port }) {
-      open(`http://${host}:${port}`)
+      open(`http://${host}:${port}`);
     },
   },
 };
