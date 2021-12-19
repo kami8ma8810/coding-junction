@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import axios from 'axios';
+// import axios from 'axios';
+import cheerio from 'cheerio';
+import hljs from 'highlight.js';
 
-// import cheerio from 'cheerio';
-// import hljs from 'highlight.js';
 export default {
   async asyncData({ params, $microcms }) {
     const data = await $microcms.get({
@@ -46,10 +46,10 @@ export default {
   //   );
   //   return data;
   // },
-  // head() {
-  //   return {
-  //     title: this.title,
-  //   };
-  // },
+  head() {
+    return {
+      title: this.title,
+    };
+  },
 };
 </script>
