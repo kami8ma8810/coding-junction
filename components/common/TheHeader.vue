@@ -13,7 +13,7 @@
           Coding Junction
         </p>
       </nuxt-link>
-      <NavBar v-if="$mq === 'infinity'" />
+      <NavBar/>
       <HamburgerMenu v-if="$mq === 'lg'" />
     </div>
   </header>
