@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hamburger-menu">
     <button
       v-show="isMobile"
       class="hamburger-button"
@@ -151,7 +151,12 @@ const MENU = [
     transform: rotate(-90deg);
   }
 }
-
+.hamburger-menu{
+  display: block;
+  @include mq(lg) {
+  display: none;
+  }
+}
 .global-nav {
   width: 100%;
   height: 100vh;

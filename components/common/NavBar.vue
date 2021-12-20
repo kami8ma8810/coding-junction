@@ -1,5 +1,5 @@
 <template>
-  <div class="nav">
+  <div class="pc-nav">
     <nav>
       <ul class="nav-items">
         <li class="nav-item"><nuxt-link to="/" exact>Home</nuxt-link></li>
@@ -15,6 +15,12 @@
 </template>
 
 <style lang="scss" scoped>
+.pc-nav{
+  display: none;
+  @include mq(lg) {
+  display: block;
+  }
+}
 
 a.nuxt-link-active {
   /* nuxt-link-exact-active : 現在のURLとリンク先のURLが完全に一致する場合 */

@@ -7,8 +7,8 @@
         </div>
         <p class="header-title__text">Coding Junction</p>
       </nuxt-link>
-      <NavBar v-if="$mq === 'infinity'" />
-      <HamburgerMenu v-if="$mq === 'lg'" />
+      <NavBar/>
+      <HamburgerMenu/>
     </div>
   </header>
 </template>
