@@ -10,7 +10,7 @@
         />
       </picture>
       <h1 class="c-article-title">{{ title }}</h1>
-      <!-- <ul class="c-category-items">
+      <ul class="c-category-items">
         <li
           v-for="categoryItem in category"
           :key="categoryItem.id"
@@ -20,7 +20,7 @@
             {{ categoryItem.name }}
           </nuxt-link>
         </li>
-      </ul> -->
+      </ul>
       <span class="c-timestamp"
         ><img
           src="~/assets/img/common/icon-clock-gray.svg"
@@ -35,39 +35,44 @@
 </template>
 
 <script>
-import axios from 'axios';
-// import cheerio from 'cheerio';
-// import hljs from 'highlight.js';
+// import axios from 'axios';
+import cheerio from 'cheerio';
+import hljs from 'highlight.js';
 
 export default {
-  // async asyncData({ params, $microcms }) {
-  //   const data = await $microcms.get({
-  //     endpoint: 'animation',
-  //     contentId: params.slug,
-  //   });
-  //   // シンタックスハイライト
-  //   const $ = cheerio.load(data.contents);
-  //   $('pre code').each((_, elm) => {
-  //     const result = hljs.highlightAuto($(elm).text());
-  //     $(elm).html(result.value);
-  //     $(elm).addClass('hljs');
-  //   });
-  //   return { ...data, contents: $.html() };
-  // },
+  async asyncData({ params, $microcms }) {
+    const data = await $microcms.get({
+      endpoint: 'animation',
+      contentId: params.slug,
+    });
+    // シンタックスハイライト
+    const $ = cheerio.load(data.contents);
+    $('pre code').each((_, elm) => {
+      const result = hljs.highlightAuto($(elm).text());
+      $(elm).html(result.value);
+      $(elm).addClass('hljs');
+    });
+    return { ...data, contents: $.html() };
+  },
+    head() {
+      return {
+        title: this.title,
+      };
+    },
 
-  async asyncData({params}) {
-    const { data } = await axios.get(
-      `https://coding-junction.microcms.io/api/v1/animation/${params.slug}`,
-      {
-        headers: { 'X-API-KEY': 'ba518e2d-72c5-4707-bde8-826fd87237bc' },
-      }
-    );
-    return data;
-  },
-  head() {
-    return {
-      title: this.title,
-    };
-  },
+  // async asyncData({params}) {
+  //   const { data } = await axios.get(
+  //     `https://coding-junction.microcms.io/api/v1/animation/${params.slug}`,
+  //     {
+  //       headers: { 'X-API-KEY': 'ba518e2d-72c5-4707-bde8-826fd87237bc' },
+  //     }
+  //   );
+  //   return data;
+  // },
+  // head() {
+  //   return {
+  //     title: this.title,
+  //   };
+  // },
 };
 </script>

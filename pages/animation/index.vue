@@ -13,29 +13,14 @@
   </div>
 </template>
 <script>
-import axios from 'axios';
+// import axios from 'axios';
+
 export default {
-  // async asyncData({ params, $microcms }) {
-  //   const data = await $microcms.get({
-  //     endpoint: 'animation',
-  //     contentId: params.slug,
-  //   });
-  //   return data;
-  // },
-  // head() {
-  //   return {
-  //     title: 'Animation',
-  //   };
-  // },
-
-
-  async asyncData() {
-    const { data } = await axios.get(
-      'https://coding-junction.microcms.io/api/v1/animation',
-      {
-        headers: { 'X-API-KEY': 'ba518e2d-72c5-4707-bde8-826fd87237bc' },
-      }
-    );
+  async asyncData({ params, $microcms }) {
+    const data = await $microcms.get({
+      endpoint: 'animation',
+      contentId: params.slug,
+    });
     return data;
   },
   head() {
@@ -43,5 +28,20 @@ export default {
       title: 'Animation',
     };
   },
+
+  // async asyncData() {
+  //   const { data } = await axios.get(
+  //     'https://coding-junction.microcms.io/api/v1/animation',
+  //     {
+  //       headers: { 'X-API-KEY': 'ba518e2d-72c5-4707-bde8-826fd87237bc' },
+  //     }
+  //   );
+  //   return data;
+  // },
+  // head() {
+  //   return {
+  //     title: 'Animation',
+  //   };
+  // },
 };
 </script>

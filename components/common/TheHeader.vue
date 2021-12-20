@@ -5,15 +5,9 @@
         <div class="header-title__logo">
           <img src="~/assets/img/common/header-logo.svg" alt="" />
         </div>
-        <p class="header-title__text">
-          <!-- <img
-              src="~/assets/img/common/text-header-title.svg"
-              alt="Coding Junction"
-            /> -->
-          Coding Junction
-        </p>
+        <p class="header-title__text">Coding Junction</p>
       </nuxt-link>
-      <NavBar/>
+      <NavBar v-if="$mq === 'infinity'" />
       <HamburgerMenu v-if="$mq === 'lg'" />
     </div>
   </header>

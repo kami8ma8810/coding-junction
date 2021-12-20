@@ -15,8 +15,9 @@
 </template>
 
 <style lang="scss" scoped>
-/* nuxt-link-exact-active : 現在のURLとリンク先のURLが完全に一致する場合 */
+
 a.nuxt-link-active {
+  /* nuxt-link-exact-active : 現在のURLとリンク先のURLが完全に一致する場合 */
   background: linear-gradient(transparent 70%, $colorLightPink 70%);
 }
 .nav-items {

@@ -25,36 +25,36 @@
 
 <script>
 export default {
-  // async asyncData({ params,$microcms }) {
-  //   const slide = await $microcms.get({
-  //     endpoint: 'slide',
-  //     contentId: params.slug,
-  //   })
-  //   return slide
-  // },
-  // data() {
-  //   return {
-  //     swiperOption: {
-  //       loop: true,
-  //       autoplay: {
-  //         delay: 3000,
-  //         disableOnInteraction: false,
-  //       },
-  //       allowTouchMove:true,
-  //       slidesPerView: 2,
-  //       centeredSlides: true,
-  //       spaceBetween: 40,
-  //       // pagination: {
-  //       //   el: '.swiper-pagination',
-  //       //   clickable: true,
-  //       // },
-  //       // navigation: {
-  //       //   nextEl: '.swiper-button-next',
-  //       //   prevEl: '.swiper-button-prev',
-  //       // },
-  //     },
-  //   }
-  // },
+  async asyncData({ params,$microcms }) {
+    const data = await $microcms.get({
+      endpoint: 'slide',
+      contentId: params.slug,
+    })
+    return data
+  },
+  data() {
+    return {
+      swiperOption: {
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        allowTouchMove:true,
+        slidesPerView: 2,
+        centeredSlides: true,
+        spaceBetween: 40,
+        // pagination: {
+        //   el: '.swiper-pagination',
+        //   clickable: true,
+        // },
+        // navigation: {
+        //   nextEl: '.swiper-button-next',
+        //   prevEl: '.swiper-button-prev',
+        // },
+      },
+    }
+  },
   head() {
     return {
       title: 'Home',
