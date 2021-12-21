@@ -4,7 +4,7 @@
       <section>
         <h1 class="top-title">
           Coding
-          JunctionではGSAPをメインに、<br>ライブラリを使用したアニメーションの実装について発信しています。
+          JunctionではGSAPをメインに、<br>Webサイトでよく利用するアニメーションのサンプルを公開しております。
         </h1>
         <div class="swiper-area">
           <client-only>
@@ -71,7 +71,7 @@ export default {
   letter-spacing: 0.05em;
   font-weight: 600;
   @include mq(md) {
-    font-size: 32px;
+    font-size: 24px;
     letter-spacing: 0.08em;
     line-height: 1.8;
   }
