@@ -4,7 +4,7 @@
       <section>
         <h1 class="top-title">
           Coding
-          JunctionではGSAPをメインに、<br>Webサイトでよく利用するアニメーションのサンプルを公開しております。
+          Junctionは一人で闘うコーダー・エンジニアのためのコミュニティです。
         </h1>
         <div class="swiper-area">
           <client-only>
