@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer-inner">
-      <p class="copyright text-muted">&copy; 2021 上かるび</p>
+      <p class="copyright text-muted">&copy; 2022 上かるび</p>
     </div>
   </footer>
 </template>

@@ -9,7 +9,7 @@ const cheerio = require('cheerio'); //nuxt generateでの不要ファイルを�
 const siteUrl = 'https://coding-junction.com/';
 const siteName = 'Coding Junction';
 const siteDesc =
-  'Coding Junctionは、コーディングをする人がいつでも戻れる場所。交流して学び合い、再出発する場所。';
+  'Coding Junctionは一人で頑張るコーダー・エンジニアのためのコミュティです。';
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target

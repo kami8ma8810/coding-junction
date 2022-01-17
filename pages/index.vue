@@ -4,9 +4,9 @@
       <section>
         <h1 class="top-title">
           Coding
-          Junctionは一人で闘うコーダー・エンジニアのためのコミュニティです。
+          Junctionは一人で頑張っているコーダー・エンジニアのためのコミュニティです。
         </h1>
-        <div class="swiper-area">
+        <!-- <div class="swiper-area">
           <client-only>
             <swiper :options="swiperOption">
               <swiper-slide v-for="(slide, index) in contents" :key="index">
@@ -14,10 +14,7 @@
               </swiper-slide>
             </swiper>
           </client-only>
-          <!-- <div slot="pagination" class="swiper-pagination" />
-          <div slot="button-prev" class="swiper-button-prev" />
-          <div slot="button-next" class="swiper-button-next" /> -->
-        </div>
+        </div> -->
       </section>
     </main>
   </div>
