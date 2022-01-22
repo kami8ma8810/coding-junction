@@ -6,7 +6,7 @@
           Coding
           Junctionは一人で頑張っているコーダー・エンジニアのためのコミュニティです。
         </h1>
-        <!-- <div class="swiper-area">
+        <div class="swiper-area">
           <client-only>
             <swiper :options="swiperOption">
               <swiper-slide v-for="(slide, index) in contents" :key="index">
@@ -14,7 +14,7 @@
               </swiper-slide>
             </swiper>
           </client-only>
-        </div> -->
+        </div>
       </section>
     </main>
   </div>
@@ -34,11 +34,11 @@ export default {
       swiperOption: {
         loop: true,
         autoplay: {
-          delay: 3000,
+          delay: 4000,
           disableOnInteraction: false,
         },
         allowTouchMove:true,
-        slidesPerView: 2,
+        slidesPerView: 3,
         centeredSlides: true,
         spaceBetween: 40,
         // pagination: {
